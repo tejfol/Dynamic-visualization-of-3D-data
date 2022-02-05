@@ -4,7 +4,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("./components/HelloWorld.vue"),
+    component: () => import("./pages/Home.vue"),
   },
   // {
   //     path: '/about',
@@ -13,6 +13,7 @@ const routes = [
   // },
 ];
 const router = new VueRouter({
+  mode: "history",
   routes, // short for `routes: routes`
 });
 

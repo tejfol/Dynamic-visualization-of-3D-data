@@ -1,4 +1,4 @@
-# Diploma project
+# Portfolio project
 
 ## Scripts
 
