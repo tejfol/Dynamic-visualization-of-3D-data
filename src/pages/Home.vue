@@ -55,16 +55,48 @@
             </div>
           </div>
         </div>
-        <div class="justify-self-center">
-          <picture>
-            <img
-              width="750"
-              height="1107"
-              class="max-w-sm rounded custom-shadow"
-              src="images/profile-image-bw.webp"
-              alt="profile picture"
-            />
-          </picture>
+        <div class="w-full custom-shadow rounded-lg border border-gray-300/50">
+          <div
+            class="
+              flex
+              w-full
+              justify-center
+              items-center
+              text-gray-300 text-xs
+              py-1
+              px-2
+              border-b border-gray-100/50
+              rounded-t-lg
+            "
+          >
+            <p>[~/Portfolio] (-fish)</p>
+            <span class="ml-auto">⌘1</span>
+          </div>
+          <div class="flex p-1 terminal-bg">
+            <div class="block text-sm">
+              <div class="flex">
+                <p class="px-1 bg-green-500/80 font-semibold text-gray-800">
+                  tejfol
+                </p>
+                <p class="px-1 bg-green-200/80 font-semibold text-gray-800">
+                  {{ hourNow }}
+                </p>
+                <p class="px-1 bg-gray-900/80 font-semibold text-green-100">
+                  ~/Portfolio
+                </p>
+                <p class="px-2">&gt;</p>
+              </div>
+            </div>
+            <picture>
+              <img
+                width="750"
+                height="1107"
+                class="pl-1 pr-12 pb-12 max-w-sm"
+                src="images/profile-image-bw.webp"
+                alt="profile picture"
+              />
+            </picture>
+          </div>
         </div>
       </section>
       <hr class="w-9/12" />
@@ -136,6 +168,13 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    hourNow() {
+      let today = new Date();
+      var time = today.getHours() + ":" + today.getMinutes();
+      return time;
+    },
   },
 };
 </script>
