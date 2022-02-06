@@ -6,7 +6,11 @@ module.exports = {
     "./styles/main.scss",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        "90vh": "90vh",
+      },
+    },
   },
   plugins: [],
 };

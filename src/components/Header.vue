@@ -1,13 +1,10 @@
 <template>
-  <div class="flex justify-between">
-    <p>Some text</p>
-    <div>
-      <a href="#1">Home</a>
-      <a href="#2">Speciality</a>
-      <a href="#3">Portfolio</a>
-      <a href="#4">Contact</a>
-    </div>
-  </div>
+  <nav class="flex justify-center space-x-8 py-6">
+    <a href="#1">Home</a>
+    <a href="#2">Speciality</a>
+    <a href="#3">Portfolio</a>
+    <a href="#4">Contact</a>
+  </nav>
 </template>
 
 <script>
