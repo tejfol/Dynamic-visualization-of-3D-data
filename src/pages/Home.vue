@@ -2,8 +2,10 @@
   <div>
     <Header class="text-white sticky top-0 w-full z-10" />
     <main id="1" class="container px-4 mx-auto space-y-4 text-white">
-      <section class="grid grid-cols-2 items-center h-screen">
-        <div class="space-y-4">
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 items-center tablet:h-90vh"
+      >
+        <div class="space-y-4 py-12">
           <p class="text-5xl">
             My name is <span class="font-semibold">Matei Mark</span>
           </p>
@@ -55,7 +57,16 @@
             </div>
           </div>
         </div>
-        <div class="w-full custom-shadow rounded-lg border border-gray-300/50">
+        <div
+          class="
+            hidden
+            md:block
+            w-full
+            custom-shadow
+            rounded-lg
+            border border-gray-300/50
+          "
+        >
           <div
             class="
               flex
@@ -91,7 +102,7 @@
               <img
                 width="750"
                 height="1107"
-                class="pl-1 pr-12 pb-12 max-w-sm"
+                class="pl-1 pr-12 pb-12 >desktop:w-max-sm"
                 src="images/profile-image-bw.webp"
                 alt="profile picture"
               />
