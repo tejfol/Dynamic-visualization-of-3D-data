@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header class="text-white sticky top-0 w-full z-10" />
-    <main id="1" class="container px-4 mx-auto space-y-4 text-white relative">
+    <main id="1" class="container px-4 mx-auto space-y-4 text-white">
       <section class="grid grid-cols-2 items-center h-screen">
         <div class="space-y-4">
           <p class="text-5xl">
@@ -31,28 +31,40 @@
                 class="self-center"
                 href="https://www.linkedin.com/in/matei-mark-761205183/"
               >
-                <img
-                  class="w-6 h-6 rounded-md"
-                  src="../assets/svg/linkedin.svg"
-                  alt="linked-in-link"
-                />
+                <picture>
+                  <img
+                    width="24"
+                    height="24"
+                    class="w-6 h-6 rounded-md"
+                    src="../assets/svg/linkedin.svg"
+                    alt="linked-in-link"
+                  />
+                </picture>
               </a>
               <a class="self-center" href="https://t.me/mateimark">
-                <img
-                  class="w-6 h-6 rounded-md"
-                  src="../assets/svg/telegram.svg"
-                  alt="linked-in-link"
-                />
+                <picture>
+                  <img
+                    width="24"
+                    height="24"
+                    class="w-6 h-6 rounded-md"
+                    src="../assets/svg/telegram.svg"
+                    alt="linked-in-link"
+                  />
+                </picture>
               </a>
             </div>
           </div>
         </div>
         <div class="justify-self-center">
-          <img
-            class="max-w-sm rounded custom-shadow"
-            src="images/profile-image-bw.png"
-            alt="profile picture"
-          />
+          <picture>
+            <img
+              width="750"
+              height="1107"
+              class="max-w-sm rounded custom-shadow"
+              src="images/profile-image-bw.webp"
+              alt="profile picture"
+            />
+          </picture>
         </div>
       </section>
       <hr class="w-9/12" />
