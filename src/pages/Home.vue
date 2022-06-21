@@ -151,10 +151,11 @@
 </template>
 
 <script>
+import Header from "components/Header.vue";
 export default {
   name: "Home",
   components: {
-    Header: () => import("components/Header.vue"),
+    Header,
   },
   data() {
     return {
@@ -189,6 +190,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>

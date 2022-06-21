@@ -1,20 +1,48 @@
-import VueRouter from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
+
+import Home from "pages/Home.vue";
+
+const scrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition;
+  } else {
+    const position = {};
+    if (to.hash) {
+      position.selector = to.hash;
+
+      if (to.hash === "#anchor2") {
+        position.offset = { y: 100 };
+      }
+
+      if (to.matched.some((m) => m.meta.scrollToTop)) {
+        position.x = 0;
+        position.y = 0;
+      }
+    }
+    return position;
+  }
+};
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("./pages/Home.vue"),
+    components: {
+      default: Home,
+    },
+    meta: { scrollToTop: true },
+    // props: {
+    //   title: 'Heading',
+    //   subTitle: 'Base Template',
+    //   description: 'version: Sqeel alpha 0.0.1',
+    // },
   },
-  // {
-  //     path: '/about',
-  //     name: 'About',
-  //     component: () => import('./components/About.vue'),
-  // },
 ];
-const router = new VueRouter({
-  mode: "history",
-  routes, // short for `routes: routes`
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  scrollBehavior,
 });
 
 export default router;

@@ -1,9 +1,10 @@
 module.exports = {
   content: [
-    "./public/index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "./src/*.{js,jsx}",
-    "./styles/main.scss",
+    "./index.html",
+    "./src/**/*.vue",
+    "./src/**/*.js",
+    "./src/main.js",
+    "./src/styles/main.scss",
   ],
   theme: {
     screens: {
